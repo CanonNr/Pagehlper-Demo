@@ -22,6 +22,7 @@ public class DemoController {
 
     @GetMapping("1")
     public PageResult<Object> get(pageEntity page,String name){
+        log.info("test");
         return UnPageHelper.doSelect(
                 page,
                 () -> goodsDao.selectAll(name, null)
